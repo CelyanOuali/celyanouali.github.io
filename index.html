@@ -1,81 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <meta charset="utf-8">
-        <title>Portfolio</title>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav_left">
-        <div class="container-fluid">
-          <a class="navbar-brand" >Celyan Ouali - Etudiant en Informatique , Programmeur et Hacker Ethique</a>
-          <div class="flex-d flex-row-reverse nav_right">
+<head>
+  <meta charset="utf-8">
+  <title>Celyan Ouali</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-            <ul class="navbar-nav">
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.linkedin.com/in/celyan-ouali/" target="_blank">Linkedin</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://drive.google.com/file/d/1oxsvrF5fMfF6IOiT9HrCIXD6sFS8pKZP/view?usp=sharing" target="_blank">Experience Professionelle</a>
-              </li>
-              <li class="nav-item dropdown">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="nav-link" href="https://www.linkedin.com/in/celyan-ouali/" target="_blank">Linkedin</a>
-                  <li><a class="nav-link" href="https://drive.google.com/file/d/1oxsvrF5fMfF6IOiT9HrCIXD6sFS8pKZP/view?usp=sharing" target="_blank">Experience Professionelle</a>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <section class = "container">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <div class="block">
-          </div>
-        </div>
-  </section>
-  <!-- Langage-->
-  <section class = "container">
-    <div class="row pad_top d-fex justify-content-between block2">
-        <div class="col-lg-4 center  pad_left">
-            <h2 class = "impg">Langage pratiqué</h2>
-            <p>Voici les langages de programmation que j'ai pu pratiquer au cours de mes Projets</p>
-            <img class="imglang" src="\public\css\JS.png" alt="Generic placeholder image" width="100" height="100">
-            <img class="imglang" src="\public\css\C.png" alt="Generic placeholder image" width="100" height="100">
-            <img class="imglang" src="\public\css\Csharp.png" alt="Generic placeholder image" width="100" height="100">
-            <img class="imglang" src="\public\css\C++.png" alt="Generic placeholder image" width="100" height="100">
-            <img class="imglang" src="\public\css\Python.jpg" alt="Generic placeholder image" width="100" height="100">
-            <img class="imglang" src="\public\css\Haskell.png" alt="Generic placeholder image" width="100" height="100">
-            <img class="imglang" src="\public\css\sql.png" alt="Generic placeholder image" width="100" height="100">
-            <img class="imglang" src="\public\css\PHP.png" alt="Generic placeholder image" width="100" height="100">
-        </div>
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-        <div class="col-lg-4 center">
-            <img class="img" src="\public\css\GitHub-logo.png" alt="Generic placeholder image" width="100">
-            <h2 class =" impg">Projets</h2>
-            <p>Interesser par mon travail ? retrouver mes projets sur :</p>
-            <p>
-            <a class="btn btn-secondary" href="https://github.com/CelyanOuali">GitHub</a>
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4 center pad_right">
-            <script src="https://tryhackme.com/badge/1102908"></script>
-            <h2 class =" impg">PenTesting</h2>
-            <p>Voici Mon profil TryHackme :</p>
-            <a class="btn btn-secondary" href="https://tryhackme.com/p/stelf">TryHackMe</a>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: DevFolio
+    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body id="page-top">
+
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top">DevCyberFolio</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll active" href="#home">Acceuil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#about">A Propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#service">Compétences</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll active" href="https://tryhackme.com/p/stelf">TryHackme</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll active" href="https://www.linkedin.com/in/celyan-ouali/">Linkedin</a>
+            <li class="nav-item">
+              <a class="nav-link js-scroll active" href="https://drive.google.com/file/d/1oxsvrF5fMfF6IOiT9HrCIXD6sFS8pKZP/view?usp=sharing">Mon Cv</a>
+            </li>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+  <!--/ Nav End /-->
 
+  <!--/ Intro Skew Star /-->
+  <div id="home" class="intro route bg-image" style="background-image: url(img/backgroud.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <!--<p class="display-6 color-d">Hello, world!</p>-->
+          <h1 class="intro-title mb-4">Je suis Celyan Ouali</h1>
+          <p class="intro-subtitle"><span class="text-slider-items">Cyber Security ,Student ,Back-end , Developer, API</span><strong class="text-slider"></strong></p>
+          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Intro Skew End /-->
+
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="img/selfie.png" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p><span class="title-s">Name: </span> <span>Celyan Ouali</span></p>
+                      <p><span class="title-s">Profile: </span> <span>Back end Developer, Pentester, DevSecOps</span></p>
+                      <p><span class="title-s">Email: </span> <span>celyanouali@gmail.com</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-mf">
+                  <p class="title-s">Maitrise</p>
+                  <span>Python</span> <span class="pull-right">85%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>C++</span> <span class="pull-right">75%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>JavaScript</span> <span class="pull-right">50%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>C</span> <span class="pull-right">90%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      A Propos de moi
+                    </h5>
+                  </div>
+                  <p class="lead">
+                    Je suis un étudiant en informatique en 2ème année a Ynov Lille,
+                    actuellement en recherche d'un stage pour valider la 2eme Années
+                    et d'une alternance commencant de la 3ème année jusqu'au niveau master.
+                  </p>
+                  <p class="lead">
+                    Autonome, curieux et ouvert d'esprit sont mes mots clés,
+                    je suis toujours en quete de nouvelle connaissances!
+                    Also ! Before I forget, I'm bilingual !
+                  </p>
+                  <p class="lead">
+                    mes Hobby et passions, les nouvelles technologies, les sciences plus particulierement
+                    la physique (quantique ou non) , le surf ,la culture japonaise et la dance!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!--/ Section Services Star /-->
+  <section id="service" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Compétences
+            </h3>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-code-working"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">JavaScript</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-code-working"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">PHP</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-code-working"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">SQL</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-code-working"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Haskell</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-monitor"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Vscode</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-monitor"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Linux</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-monitor"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">VMWare</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Section Contact-Footer Star /-->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-mf">
+            <div id="contact" class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Envoyer un message
+                    </h5>
+                  </div>
+                  <div>
+                      <form action="" method="post" role="form" class="contactForm">
+                      <div id="sendmessage">Votre message a été envoyé, merci!</div>
+                      <div id="errormessage"></div>
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="email invalide" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Au moins 8 charactère requis" />
+                              <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Ecriver votre message" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <button type="submit" class="button button-a button-big button-rouded">Envoyer le Message</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">
+                      Get in Touch
+                    </h5>
+                  </div>
+                  <div class="more-info">
+                    <p class="lead">
+                      Besoin de précision ? d'informationsupplémentaire?
+                      demander moi ! trouvez ci-dessous mes contacts !
+                    </p>
+                    <ul class="list-ico">
+                      <li><span class="ion-email"></span> celyanouali@gmail.com</li>
+                    </ul>
+                  </div>
+                  <div class="socials">
+                    <ul>
+                      <li><a href="https://github.com/CelyanOuali"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
 
 </body>
 </html>
