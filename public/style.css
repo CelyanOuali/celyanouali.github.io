@@ -39,6 +39,10 @@ body, html {
   align-content: center;
 }
 
+.imglang {
+gap: 30px;
+}
+
 .img {
   padding-top: 20px;  /* Adjusted padding to create space between images */
 }
