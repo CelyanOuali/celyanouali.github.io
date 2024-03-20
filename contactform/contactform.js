@@ -1,39 +1,30 @@
 jQuery(document).ready(function($) {
   "use strict";
-
   // Contact Form Submission
   $('form.contactForm').submit(function(event) {
     event.preventDefault(); // Prevent the default form submission behavior
 
     var form = $(this); // Reference to the form element
-    var formData = form.serialize(); // Serialize form data to send via AJAX
 
-    // Add your EmailJS public key
-    var publicKey = "yMMakr9KQLEBwbkJb"; // Replace with your actual EmailJS public key
+    // Define the parameters for emailjs.sendForm
+    var serviceID = 'service_i58p4dg';
+    var templateID = 'template_vnvsnrc';
+    var options = {}; // You can optionally specify additional options here
 
-    // AJAX POST request to send form data
-    $.ajax({
-      type: "POST",
-      url: "https://api.emailjs.com/api/v1.0/email/send", // URL for EmailJS API endpoint
-      headers: {
-        "Authorization": "Bearer " + publicKey // Include public key in the request headers
-      },
-      data: formData, // Form data to be sent
-      success: function(response) {
-        // Handle successful response from the server
-        console.log("Form submitted successfully:", response);
+    // Use emailjs.sendForm to send the form data
+    emailjs.sendForm(serviceID, templateID, form[0], options)
+      .then(function(response) {
+        // Handle success response
+        console.log('Form submitted successfully:', response);
         $("#sendmessage").addClass("show");
         $("#errormessage").removeClass("show");
         form[0].reset(); // Reset the form fields
-      },
-      error: function(xhr, status, error) {
-        // Handle error response from the server
-        console.error("Form submission failed:", error);
+      }, function(error) {
+        // Handle error response
+        console.error('Form submission failed:', error);
         $("#sendmessage").removeClass("show");
         $("#errormessage").addClass("show");
         $('#errormessage').html("Error: " + error);
-      }
-    });
+      });
   });
-
 });

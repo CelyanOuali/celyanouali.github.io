@@ -7,7 +7,7 @@
         if (!$('#mainNav').hasClass('navbar-reduce')) {
             $('#mainNav').addClass('navbar-reduce');
         }
-    })
+    });
 
     // Preloader
     $(window).on('load', function () {
@@ -68,7 +68,6 @@
         target: '#mainNav',
         offset: navHeight
     });
-    /*--/ End Scrolling nav /--*/
 
     /*--/ Navbar Menu Reduce /--*/
     $(window).trigger('scroll');
@@ -112,23 +111,6 @@
                 items: 1,
             }
         }
-    });
-
-	emailjs.init("yMMakr9KQLEBwbkJb");
-    // Handle form submission and send email using EmailJS
-    $('.contactForm').submit(function (event) {
-        event.preventDefault(); // Prevent default form submission
-        var formData = $(this).serialize(); // Serialize form data
-
-        // Send email using EmailJS
-        emailjs.send("service_i58p4dg", "template_vnvsnrc", formData)
-            .then(function (response) {
-                // If email is sent successfully, show success message
-                $('#sendmessage').fadeIn().html("Votre message a été envoyé, merci!");
-            }, function (error) {
-                // If there is an error, show error message
-                $('#errormessage').fadeIn().html("Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer plus tard.");
-            });
     });
 
 })(jQuery);
