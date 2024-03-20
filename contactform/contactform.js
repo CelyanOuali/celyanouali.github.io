@@ -8,10 +8,16 @@ jQuery(document).ready(function($) {
     var form = $(this); // Reference to the form element
     var formData = form.serialize(); // Serialize form data to send via AJAX
 
+    // Add your EmailJS public key
+    var publicKey = "yMMakr9KQLEBwbkJb"; // Replace with your actual EmailJS public key
+
     // AJAX POST request to send form data
     $.ajax({
       type: "POST",
       url: "https://api.emailjs.com/api/v1.0/email/send", // URL for EmailJS API endpoint
+      headers: {
+        "Authorization": "Bearer " + publicKey // Include public key in the request headers
+      },
       data: formData, // Form data to be sent
       success: function(response) {
         // Handle successful response from the server
