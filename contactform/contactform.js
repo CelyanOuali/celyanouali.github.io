@@ -1,5 +1,9 @@
 jQuery(document).ready(function($) {
   "use strict";
+
+  // Initialize EmailJS with user_id
+  emailjs.init("IhLLWYFXuc77f69_f");
+
   // Contact Form Submission
   $('form.contactForm').submit(function(event) {
     event.preventDefault(); // Prevent the default form submission behavior
@@ -7,10 +11,13 @@ jQuery(document).ready(function($) {
     var form = $(this); // Reference to the form element
 
     // Define the parameters for emailjs.sendForm
-    emailjs.initiate('yMMakr9KQLEBwbkJb');
     var serviceID = 'service_i58p4dg';
     var templateID = 'template_vnvsnrc';
-    var options = {}; // You can optionally specify additional options here
+
+    // Include user_id in the options object
+    var options = {
+      user_id: 'IhLLWYFXuc77f69_f' // Ensure this matches the initialized user_id above
+    };
 
     // Use emailjs.sendForm to send the form data
     emailjs.sendForm(serviceID, templateID, form[0], options)
