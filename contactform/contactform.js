@@ -2,56 +2,32 @@ jQuery(document).ready(function($) {
   "use strict";
 
   // Contact Form Submission
-  $('form.contactForm').submit(function() {
-      var f = $(this).find('.form-group');
-      var ferror = false;
+  $('form.contactForm').submit(function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
 
-      // Perform client-side form validation
-      f.each(function() {
-          var i = $(this).find('input, textarea');
-          var rule = i.attr('data-rule');
+    var form = $(this); // Reference to the form element
+    var formData = form.serialize(); // Serialize form data to send via AJAX
 
-          if (rule !== undefined) {
-              var pos = rule.indexOf(':');
-              if (pos >= 0) {
-                  var exp = rule.substr(pos + 1);
-                  rule = rule.substr(0, pos);
-              }
-
-              switch (rule) {
-                  case 'required':
-                      if (i.val() === '') {
-                          ferror = true;
-                      }
-                      break;
-                  case 'minlen':
-                      if (i.val().length < parseInt(exp)) {
-                          ferror = true;
-                      }
-                      break;
-                  case 'email':
-                      var emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
-                      if (!emailExp.test(i.val())) {
-                          ferror = true;
-                      }
-                      break;
-              }
-
-              i.next('.validation').html(ferror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'Invalid Input') : '').show('blind');
-          }
-      });
-
-      // Simulate form submission success
-      if (!ferror) {
-          $("#sendmessage").addClass("show");
-          $("#errormessage").removeClass("show");
-          $('.contactForm').find("input, textarea").val("");
-      } else {
-          $("#sendmessage").removeClass("show");
-          $("#errormessage").addClass("show");
-          $('#errormessage').html("There was an error submitting the form. Please try again later.");
+    // AJAX POST request to send form data
+    $.ajax({
+      type: "POST",
+      url: "https://api.emailjs.com/api/v1.0/email/send", // URL for EmailJS API endpoint
+      data: formData, // Form data to be sent
+      success: function(response) {
+        // Handle successful response from the server
+        console.log("Form submitted successfully:", response);
+        $("#sendmessage").addClass("show");
+        $("#errormessage").removeClass("show");
+        form[0].reset(); // Reset the form fields
+      },
+      error: function(xhr, status, error) {
+        // Handle error response from the server
+        console.error("Form submission failed:", error);
+        $("#sendmessage").removeClass("show");
+        $("#errormessage").addClass("show");
+        $('#errormessage').html("Error: " + error);
       }
-
-      return false;
+    });
   });
+
 });
