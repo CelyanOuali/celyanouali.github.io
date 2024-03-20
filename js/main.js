@@ -114,13 +114,13 @@
         }
     });
 
+	emailjs.init("yMMakr9KQLEBwbkJb");
     // Handle form submission and send email using EmailJS
     $('.contactForm').submit(function (event) {
         event.preventDefault(); // Prevent default form submission
         var formData = $(this).serialize(); // Serialize form data
 
         // Send email using EmailJS
-        emailjs.init("yMMakr9KQLEBwbkJb");
         emailjs.send("service_i58p4dg", "template_vnvsnrc", formData)
             .then(function (response) {
                 // If email is sent successfully, show success message
