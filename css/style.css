@@ -511,7 +511,18 @@ a:hover {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
+  transition: all .5s ease-in-out;
+  padding-top: 1.563rem;
+  padding-bottom: 1.563rem;
 }
+
+
+@media (max-width: 767px) {
+  .navbar-b .navbar-brand {
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 
 .navbar-b .navbar-nav .dropdown-item.show .dropdown-menu,
 .navbar-b .dropdown.show .dropdown-menu,
