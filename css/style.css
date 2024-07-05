@@ -22,14 +22,63 @@ h5,
 h6 {
   color: #1e1e1e;
 }
+/* Ensure text alignment and padding */
+.services-mf {
+  padding: 60px 0;
+  text-align: center; /* Center align text content */
+}
+
+.title-a {
+  font-size: 24px;
+  color: #333;
+}
+
+.line-mf {
+  width: 100px;
+  height: 3px;
+  background-color: #3498db;
+  margin: 20px auto; /* Center align line */
+}
+
+.service-box {
+  text-align: left; /* Align content inside service box to left */
+}
+
+.s-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.s-description {
+  margin-bottom: 20px;
+}
+
 .mission-list {
-  list-style-position: inside;
-  padding-left: 0;
+  list-style-type: none;
+  padding: 0;
+  text-align: left; /* Align list items to left */
 }
 
 .mission-list li {
   margin-bottom: 10px;
 }
+
+.mission-list li:before {
+  content: "•";
+  margin-right: 10px;
+  color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .title-a {
+    font-size: 20px;
+  }
+
+  .line-mf {
+    width: 80px;
+  }
+}
+
 
 a {
   color: #1e1e1e;
