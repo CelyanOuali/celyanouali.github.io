@@ -61,6 +61,7 @@ h6 {
 
 .mission-list li {
   margin-bottom: 10px; /* Adjust the margin-bottom to control spacing between list items */
+  line-height: 1.6; /* Ensure consistent line height for all items */
 }
 
 .mission-list li:before {
