@@ -22,6 +22,14 @@ h5,
 h6 {
   color: #1e1e1e;
 }
+.mission-list {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.mission-list li {
+  margin-bottom: 10px;
+}
 
 a {
   color: #1e1e1e;
